@@ -1,9 +1,12 @@
 body {
   padding-top: 30px;
 }
+
 header {
   height: 200px;
 }
-Welcome {
-  padding-top: 50px;
+
+P{
+  color: #C3073F;
+  font-weight: 300;
 }
