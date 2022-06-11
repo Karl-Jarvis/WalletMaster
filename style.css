@@ -1,12 +1,12 @@
 body {
   padding-top: 30px;
-}
-
-header {
-  height: 200px;
+  height: 2000px;
 }
 
 P{
-  color: #C3073F;
   font-weight: 300;
+}
+
+a{
+  color: white;
 }
