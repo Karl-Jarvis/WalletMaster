@@ -59,9 +59,22 @@
       </div>
     </nav>
 
-
-
-
+    <section class="bg-dark text-white p-5"
+    <form class="mb-3" action="/search" method="GET">
+      <div class="input-group input-group-shadow">
+        <input id="txtSearchInput" type="text" class="form-control searchautocomplete ui-autocomplete-input list-unstyled py-3 mb-0"
+                autocomplete="off" spellcheck="false" placeholder="Search by Address / Ens" aria-describedby="button-header-search"
+                name="q" onkeyup="handleSearchText(this);" maxlength="68">    <input type="hidden" value="" id="hdnSearchText">
+        <input type="hidden" value="" id="hdnSearchLabel">
+        <input id="hdnIsTestNet" value="False" type="hidden">
+      <div class="input-group-append">
+        <button class="btn btn-primary"
+         type="submit">
+        </button>
+      </div>
+      </div>
+    </form>
+    </section>
 
 
 
