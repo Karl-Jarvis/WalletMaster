@@ -1,5 +1,7 @@
+
+
 // Set your API key here
-const APIKEY = 'ckey_0c0d1fe796d044369810fb1f663';
+const APIKEY = '';
 
 function getData() {
     // Get key HTML elements and reset table content
