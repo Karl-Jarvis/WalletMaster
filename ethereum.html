@@ -46,7 +46,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a href="ethereum.html" class="dropdown-item">Ethereum</a></li>
               <li><a href="binance.html" class="dropdown-item">Binance</a></li>
-              <li><a href="cardano.html" class="dropdown-item">Cardano</a></li>
+              <li><a href="solana.html" class="dropdown-item">Solana</a></li>
             </ul>
           </li>
           <li class="nav-item active">
@@ -59,17 +59,20 @@
       </div>
     </nav>
 
+<!-- Search bar -->
     <section class="bg-dark text-white p-5"
     <form class="mb-3" action="/search" method="GET">
       <div class="input-group input-group-shadow">
-        <input id="txtSearchInput" type="text" class="form-control searchautocomplete ui-autocomplete-input list-unstyled py-3 mb-0"
+        <input id="address" type="text" value="demo.eth" class="form-control searchautocomplete ui-autocomplete-input list-unstyled py-3 mb-0"
                 autocomplete="off" spellcheck="false" placeholder="Search by Address / Ens" aria-describedby="button-header-search"
-                name="q" onkeyup="handleSearchText(this);" maxlength="68">    <input type="hidden" value="" id="hdnSearchText">
+                name="q" onkeyup="handleSearchText(this);" maxlength="68">
+        <input type="hidden" value="" id="hdnSearchText">
         <input type="hidden" value="" id="hdnSearchLabel">
         <input id="hdnIsTestNet" value="False" type="hidden">
       <div class="input-group-append">
-        <button class="btn btn-primary"
-         type="submit">
+
+        <button id="get-data-button"class="btn btn-primary"
+         type="submit"> Get Wallet Balance
         </button>
       </div>
       </div>
@@ -78,34 +81,28 @@
 
     <!-- Api example code https://replit.com/@1millionwallets/Template-Wallet-Balance-Dashboard-JavaScript#index.html -->
     <section>
-      <h1>Basic Wallet App</h1>
-    <br>
     Select Network:
     <select name="chain" id="chain">
         <option value="1">Ethereum Mainnet</option>
     </select>
     <br><br>
-    Enter wallet address or ENS (Ethereum Mainnet only): <input type="text" id="address" value="demo.eth">
-    <button id="get-data-button">Get Wallet Balance</button>
-
-
     <h3>Metadata</h3>
     <ul id="metadata"></ul>
 
-    <table id="tokenTable">
+    <table id="tokenTable" class="table table-bordered" style="widht: 100%;" >
         <thead>
             <tr>
                 <th></th>
                 <th>Token</th>
                 <th>Symbol</th>
                 <th>Balance</th>
-                <th>Fiat Value</th>
+                <th style="width: 500px;">Fiat Value</th>
                 <th>Type</th>
             </tr>
         </thead>
         <tbody>
         </tbody>
     </table>
-    <script src="script.js" ></script>
+    <script src="script_ethereum.js" ></script>
   </body>
 </html>

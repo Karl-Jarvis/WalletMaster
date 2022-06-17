@@ -1,5 +1,3 @@
-
-
 // Set your API key here
 const APIKEY = `TOKEN`;
 
@@ -10,10 +8,10 @@ function getData() {
     tableRef.innerHTML = "";
 
     // Covalent API request setup
-    const address = document.getElementById('address').value || 'demo.eth';
-    const chainId = document.getElementById('chain').value || '1';
+    const address = document.getElementById('address').value || '';
+    const chainId = document.getElementById('chain').value || '1399811149';
     //const url = new URL(`https://api.covalenthq.com/v1/${chainId}/address/${address}/balances_v2`);
-    const url = new URL(`https://api.covalenthq.com/v1/1/address/${address}/balances_v2/`);
+    const url = new URL(`https://api.covalenthq.com/v1/1399811149/address/${address}/balances_v2/`);
     url.search = new URLSearchParams({
         key: APIKEY
     })
