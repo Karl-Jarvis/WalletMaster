@@ -41,12 +41,12 @@
             <a href="#" class="nav-link dropdown-toggle"id="navbarDropdown"
             role="button" data-bs-toggle="dropdown" aria-expanded="false"
             >
-                Wallets
+                Chains
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a href="ethereum.html" class="dropdown-item">Ethereum</a></li>
-              <li><a href="binance.html" class="dropdown-item">Binance</a></li>
-              <li><a href="solana.html" class="dropdown-item">Solana</a></li>
+              <li><a href="ethereum.html?chain=1" class="dropdown-item">Ethereum</a></li>
+              <li><a href="binance.html?chain=56" class="dropdown-item">Binance</a></li>
+              <li><a href="solana.html?chain=1399811149" class="dropdown-item">Solana</a></li>
             </ul>
           </li>
           <li class="nav-item active">
@@ -63,7 +63,7 @@
         <section class="bg-dark text-white p-5"
         <form class="mb-3" action="/search" method="GET">
           <div class="input-group input-group-shadow">
-            <input id="address" type="text" value="demo.eth" class="form-control searchautocomplete ui-autocomplete-input list-unstyled py-3 mb-0"
+            <input id="address" type="text"  class="form-control searchautocomplete ui-autocomplete-input list-unstyled py-3 mb-0"
                     autocomplete="off" spellcheck="false" placeholder="Search by Address / Ens" aria-describedby="button-header-search"
                     name="q" onkeyup="handleSearchText(this);" maxlength="68">
             <input type="hidden" value="" id="hdnSearchText">
@@ -71,8 +71,8 @@
             <input id="hdnIsTestNet" value="False" type="hidden">
           <div class="input-group-append">
 
-            <button id="get-data-button"class="btn btn-primary"
-             type="submit"> Get Wallet Balance
+            <button onclick="getData(1399811149)"class="btn btn-primary"type="submit">
+              Get Wallet Balance
             </button>
           </div>
           </div>
@@ -81,11 +81,6 @@
 
         <!-- Api example code https://replit.com/@1millionwallets/Template-Wallet-Balance-Dashboard-JavaScript#index.html -->
         <section>
-        Select Network:
-        <select name="chain" id="chain">
-            <option value="1399811149">Solana mainnet</option>
-        </select>
-        <br><br>
         <h3>Metadata</h3>
         <ul id="metadata"></ul>
 
@@ -112,7 +107,7 @@
       </div>
     </footer>
 
-      <script src="script_solana.js" ></script>
+      <script src="script.js" ></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
   </body>

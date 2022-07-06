@@ -1,7 +1,7 @@
 // Set your API key here
-const APIKEY = `TOKEN`;
+const APIKEY = window.token;
 
-function getData() {
+function getData(chainId) {
     // Get key HTML elements and reset table content
     const ul = document.getElementById('metadata');
     const tableRef = document.getElementById('tokenTable').getElementsByTagName('tbody')[0];
@@ -9,9 +9,8 @@ function getData() {
 
     // Covalent API request setup
     const address = document.getElementById('address').value || '';
-    const chainId = document.getElementById('chain').value || '1399811149';
-    //const url = new URL(`https://api.covalenthq.com/v1/${chainId}/address/${address}/balances_v2`);
-    const url = new URL(`https://api.covalenthq.com/v1/1399811149/address/${address}/balances_v2/`);
+    console.log(chainId);
+    const url = new URL(`https://api.covalenthq.com/v1/${chainId}/address/${address}/balances_v2/`);
     url.search = new URLSearchParams({
         key: APIKEY
     })
@@ -46,4 +45,3 @@ function getData() {
     })
 
 }
-  document.querySelector('#get-data-button').addEventListener('click', getData)
