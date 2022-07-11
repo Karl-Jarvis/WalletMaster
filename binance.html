@@ -32,12 +32,12 @@
       <div class ="collapse navbar-collapse "id="navbarNav" >
         <ul class=" navbar-nav nav-tabs ms-auto">
           <li class="nav-item active">
-            <a href="index.html" class="nav-link active">
+            <a href="index.html" class="nav-link">
               Home
             </a>
           </li>
           <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle"id="navbarDropdown"
+            <a href="#" class="nav-link dropdown-toggle active"id="navbarDropdown"
             role="button" data-bs-toggle="dropdown" aria-expanded="false"
             >
                 Chains
@@ -63,44 +63,46 @@
       </div>
     </nav>
     <!-- Search bar -->
-        <section class="bg-dark text-white p-5"
-        <form class="mb-3" action="/search" method="GET">
+        <section class="bg-dark text-white p-5">
+        <form class="mb-3 form-inline" method="GET">
+          <div class="container">
           <div class="input-group input-group-shadow">
-            <input id="address" type="text" class="form-control searchautocomplete ui-autocomplete-input list-unstyled py-3 mb-0"
-                    autocomplete="off" spellcheck="false" placeholder="Search by Address" aria-describedby="button-header-search"
-                    name="q" onkeyup="handleSearchText(this);" maxlength="68">
+            <input id="address" type="text" class="form-control py-3 mb-0" placeholder="Search by Address / Ens"  maxlength="68">
             <input type="hidden" value="" id="hdnSearchText">
             <input type="hidden" value="" id="hdnSearchLabel">
             <input id="hdnIsTestNet" value="False" type="hidden">
           <div class="input-group-append">
-
             <button onclick="getData(56)"class="btn btn-primary"type="submit">
-              Get Wallet Balance
+             <img src="images/icons/search.ico"/> Get Wallet Balance
             </button>
           </div>
           </div>
+        </div>
         </form>
         </section>
 
         <!-- Api example code https://replit.com/@1millionwallets/Template-Wallet-Balance-Dashboard-JavaScript#index.html -->
         <section>
-        <h3>Metadata</h3>
-        <ul id="metadata"></ul>
+          <div class="container aos-init aos-animate">
+          <h3>Metadata</h3>
+          <ul id="metadata"></ul>
 
-        <table id="tokenTable" class="table table-bordered">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Token</th>
-                    <th>Symbol</th>
-                    <th>Balance</th>
-                    <th>Fiat Value</th>
-                    <th>Type</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+          <table id="tokenTable" class="table table-bordered" style="widht: 100%;" >
+              <thead>
+                  <tr>
+                      <th></th>
+                      <th>Token</th>
+                      <th>Symbol</th>
+                      <th>Balance</th>
+                      <th>Fiat Value</th>
+                      <th>Type</th>
+                  </tr>
+              </thead>
+              <tbody>
+              </tbody>
+          </table>
+        </div>
+      </section>
 
     <!-- Footer -->
     <footer class="page-footer font-small fixed-bottom">
